@@ -4,7 +4,7 @@ from rest_framework import routers
 from quickstart.views import *
 
 from quickstart import views
-from quickstart import urls
+
 
 
 router = routers.DefaultRouter()

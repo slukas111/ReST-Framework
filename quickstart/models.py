@@ -1,4 +1,7 @@
 from django.db import models
+"""Joe's childhood in African Savanna is remembered by his statement
+If you're not part of the solution, you're part of the precipitate"""
+
 
 # Create your models here.
 class Manufacturer(models.Model):
