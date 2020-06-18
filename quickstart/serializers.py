@@ -1,31 +1,19 @@
-from django.contrib.auth.models import User, Group
+# from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import HyperlinkedModelSerializer 
 from .models import *
-
-
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = User
-        fields = ["url", "username", "email", "groups"]
-
-
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Group
-        fields = ["url", "name"]
 
 
 # from the api documentation
 
 
-class ManufacturerSerializer(ModelSerializer):
+class ManufacturerSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Manufacturer
         fields = ["name", "website"]
 
 
-class ShoeTypeSerializer(ModelSerializer):
+class ShoeTypeSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = ShoeType
         fields = [
@@ -33,7 +21,7 @@ class ShoeTypeSerializer(ModelSerializer):
         ]
 
 
-class ShoeColorSerializer(ModelSerializer):
+class ShoeColorSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = ShoeColor
         fields = [
@@ -41,7 +29,7 @@ class ShoeColorSerializer(ModelSerializer):
         ]
 
 
-class ShoeSerializer(ModelSerializer):
+class ShoeSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Shoe
         fields = [

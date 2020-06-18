@@ -9,8 +9,7 @@ from quickstart import views
 
 router = routers.DefaultRouter()
 
-router.register(r"users", views.UserViewSet, basename="users")
-router.register(r"groups", views.GroupViewSet, basename="groups")
+
 router.register(r"manufacturer", views.ManufacturerViewSet, basename="manufacturer")
 router.register(r"shoetype", views.ShoeTypeViewSet)
 router.register(r"shoecolor", views.ShoeColorViewSet)
