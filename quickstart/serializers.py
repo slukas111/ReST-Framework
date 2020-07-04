@@ -1,35 +1,30 @@
 # from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from rest_framework.serializers import HyperlinkedModelSerializer 
-from .models import *
+from quickstart.models import *
 
 
 # from the api documentation
 
 
-class ManufacturerSerializer(HyperlinkedModelSerializer):
+class ManufacturerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Manufacturer
         fields = ["name", "website"]
 
 
-class ShoeTypeSerializer(HyperlinkedModelSerializer):
+class ShoeTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ShoeType
-        fields = [
-            "style",
-        ]
+        fields = ["style"]
 
 
-class ShoeColorSerializer(HyperlinkedModelSerializer):
+class ShoeColorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ShoeColor
-        fields = [
-            "shoe_color",
-        ]
+        fields = ["shoe_color"]
 
-
-class ShoeSerializer(HyperlinkedModelSerializer):
+class ShoeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Shoe
         fields = [

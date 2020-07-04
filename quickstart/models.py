@@ -13,7 +13,7 @@ class Manufacturer(models.Model):
 
 
 class ShoeType(models.Model):
-    style = models.CharField(max_length=100)
+    style =models.CharField(max_length=50)
 
     def __str__(self):
         return self.style
@@ -29,6 +29,7 @@ class ShoeColor(models.Model):
     VIOLET = "V"
     BLACK = "Bl"
     WHITE = "W"
+    
     ROYGBIV = [
         ("R", "Red"),
         ("O", "Orange"),
