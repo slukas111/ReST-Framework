@@ -25,6 +25,9 @@ class ShoeColorSerializer(serializers.HyperlinkedModelSerializer):
         fields = ["shoe_color"]
 
 class ShoeSerializer(serializers.HyperlinkedModelSerializer):
+    manufacturer = serializers.StringRelatedField()
+    color = serializers.StringRelatedField()
+    shoe_type = serializers.StringRelatedField()
     class Meta:
         model = Shoe
         fields = [
