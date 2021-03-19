@@ -7,7 +7,7 @@ authors = ["Sasha Lukas <sashamati@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 django = "^3.0.8"
-djangorestframework = "^3.11.0"
+djangorestframework = "^3.11.2"
 
 [tool.poetry.dev-dependencies]
 
